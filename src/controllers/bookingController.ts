@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { createBooking } from "../services/bookingService";
-import { CreateBookingDTO } from "../dtos/bookingDto/create-booking";
+import { CreateBookingDTO } from "../dtos/bookingDto/createBooking.dto";
 import { ApiResponse } from "../shared/apiResponse";
 import { IBooking } from "../interfaces/booking.interface";
 
