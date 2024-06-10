@@ -21,7 +21,7 @@ The Postman collection for testing the API endpoints is included in the `postman
 
 You can now see all the API requests in Postman and test the endpoints easily.
 
-## API Documentation
+## API Documentation(not completed)
 
 The API documentation is available at [http://localhost:3000/api-docs](http://localhost:3000/api-docs).
 
@@ -98,8 +98,10 @@ my-project/
 
 ## Incoming changes:
 
-### Add validation for inputs
+1. Add validation for inputs
 
-### Create simple Ids
+2. Create simple Id fields
 
-###
+3. Embed Documents
+
+4. Validation middleware
