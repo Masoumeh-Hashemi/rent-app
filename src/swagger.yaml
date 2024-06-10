@@ -1,0 +1,64 @@
+openapi: 3.0.0
+info:
+  title: My Project API
+  version: 1.0.0
+  description: This is a simple CRUD API application made with Express and documented with Swagger
+servers:
+  - url: http://localhost:3000
+
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - user_name
+        - email
+        - password
+        - phune_number
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the user
+        user_name:
+          type: string
+        profile_photo:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        phune_number:
+          type: string
+      example:
+        id: d5fE_asz
+        user_name: JohnDoe
+        profile_photo: http://example.com/photo.jpg
+        email: johndoe@example.com
+        password: supersecretpassword
+        phune_number: 123-456-7890
+
+tags:
+  - name: Users
+    description: The users managing API
+
+paths:
+  /users/{id}:
+    get:
+      summary: Get the user by id
+      tags: [Users]
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The user id
+      responses:
+        200:
+          description: The user description by id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        404:
+          description: The user was not found
