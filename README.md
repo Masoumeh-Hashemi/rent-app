@@ -96,6 +96,10 @@ my-project/
     }
     ```
 
+## Time spend on the project:
+
+![waka time extension](pic.png)
+
 ## Incoming changes:
 
 1. Add validation for inputs
