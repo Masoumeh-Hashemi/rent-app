@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "23e65ba7-d8cc-460f-8fc4-90ffa53f6acf",
+		"name": "rent-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\",\n    \"phone_number\": \"1234567890\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-house",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/houses/search?latitude=-68.1924&longitude=-14.7739",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"houses",
+						"search"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "-68.1924"
+						},
+						{
+							"key": "longitude",
+							"value": "-14.7739"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-favorite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": \"6666b57be2ec65418b7d86ac\",\n  \"house_id\": \"6666b57be2ec65418b7d86d2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/favorites/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"favorites",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings-create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"guest_id\": \"60d5f9b9d67e4c1b2c8b4567\",\n  \"host_id\": \"60d5fa03d67e4c1b2c8b4568\",\n  \"house_id\": \"60d5fa03d67e4c1b2c8b4569\",\n  \"total_price\": 150.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-house",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": \"6666b57be2ec65418b7d86be\",\n  \"price\": 100000,\n  \"location\": {\n    \"type\": \"Point\",\n    \"coordinates\": [45.78, 78.68]\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/houses/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"houses",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

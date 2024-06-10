@@ -7,6 +7,20 @@
 3. Create Mock data: `npm run seed`
 4. Run the project: `npm run dev`
 
+## Postman Collection
+
+The Postman collection for testing the API endpoints is included in the `postman` directory.
+
+### Importing the Postman Collection
+
+1. Open Postman.
+2. Click on the **"Import"** button.
+3. Select the **"Upload Files"** tab.
+4. Navigate to the `postman` directory and select the JSON file.
+5. Click **"Open"** to import the collection.
+
+You can now see all the API requests in Postman and test the endpoints easily.
+
 ## API Documentation
 
 The API documentation is available at [http://localhost:3000/api-docs](http://localhost:3000/api-docs).
